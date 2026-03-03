@@ -15,6 +15,7 @@ body {
     font-family: "Segoe UI", Arial, sans-serif;
     margin: 0;
     color: var(--text-color);
+    font-size: 18px;
     background:
         radial-gradient(circle at 15% 0%, rgba(245, 158, 11, 0.1), transparent 35%),
         radial-gradient(circle at 85% 10%, rgba(249, 115, 147, 0.12), transparent 38%),
@@ -28,7 +29,7 @@ header {
     padding: 26px 14px;
     background:
         linear-gradient(rgba(8, 47, 73, 0.55), rgba(15, 118, 110, 0.55)),
-        url("https://source.unsplash.com/1600x900/?can-tho,vietnam,river") center/cover no-repeat;
+        url("https://source.unsplash.com/1600x900/?can-tho,ninh-kieu,river") center/cover no-repeat;
 }
 
 header::after {
@@ -43,15 +44,15 @@ header::after {
 
 header h1 {
     margin: 0;
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-size: clamp(2rem, 3.5vw, 2.9rem);
     letter-spacing: 0.5px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 header p {
     margin: 10px auto 0;
-    max-width: 760px;
-    font-size: 1.03rem;
+    max-width: 780px;
+    font-size: 1.15rem;
 }
 
 nav {
@@ -63,7 +64,7 @@ nav {
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 24px;
+    gap: 18px;
     list-style: none;
     margin: 0;
     padding: 12px;
@@ -72,10 +73,10 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    font-size: 1.02rem;
+    font-size: 1.08rem;
     font-weight: 700;
     color: var(--river);
-    padding: 8px 12px;
+    padding: 9px 14px;
     border-radius: 999px;
     transition: all 0.25s ease;
 }
@@ -102,7 +103,7 @@ nav a.active {
     background: #fff;
     border-radius: 14px;
     border: 1px solid #efe6d1;
-    padding: 15px;
+    padding: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -112,21 +113,13 @@ nav a.active {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
-.quick-info article:nth-child(1) {
-    border-top: 4px solid var(--sun);
-}
-
-.quick-info article:nth-child(2) {
-    border-top: 4px solid var(--river);
-}
-
-.quick-info article:nth-child(3) {
-    border-top: 4px solid var(--leaf);
-}
+.quick-info article:nth-child(1) { border-top: 4px solid var(--sun); }
+.quick-info article:nth-child(2) { border-top: 4px solid var(--river); }
+.quick-info article:nth-child(3) { border-top: 4px solid var(--leaf); }
 
 .quick-info h2 {
     margin: 0 0 8px;
-    font-size: 1.08rem;
+    font-size: 1.2rem;
 }
 
 .quick-info p {
@@ -145,9 +138,9 @@ nav a.active {
     border-radius: 999px;
     background: linear-gradient(135deg, var(--sun), #ea580c);
     color: #fff;
-    font-size: 0.98rem;
+    font-size: 1.02rem;
     font-weight: 700;
-    padding: 10px 18px;
+    padding: 12px 20px;
     cursor: pointer;
     box-shadow: 0 6px 14px rgba(245, 158, 11, 0.35);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -163,6 +156,7 @@ nav a.active {
     margin: 10px 0 0;
     color: #334155;
     font-style: italic;
+    font-size: 1.02rem;
 }
 
 main {
@@ -173,7 +167,7 @@ iframe {
     width: min(1180px, 100%);
     display: block;
     margin: 0 auto;
-    height: calc(100vh - 450px);
+    height: calc(100vh - 470px);
     min-height: 420px;
     border: 2px solid #ecdcb3;
     border-radius: 12px;
@@ -185,14 +179,19 @@ footer {
     text-align: center;
     color: #475569;
     padding: 12px 10px 18px;
+    font-size: 0.98rem;
 }
 
 @media (max-width: 768px) {
+    body {
+        font-size: 17px;
+    }
+
     iframe {
-        height: calc(100vh - 560px);
+        height: calc(100vh - 620px);
     }
 
     header p {
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
 }
