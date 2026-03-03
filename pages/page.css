@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1f2933;
+    background: #ffffff;
+    padding: 24px;
+}
+
+h2 {
+    margin-top: 0;
+    color: #005073;
+}
+
+h3 {
+    color: #107dac;
+}
+
+.hero {
+    background: linear-gradient(120deg, #e0f2fe, #f0f9ff);
+    border-left: 5px solid #107dac;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+article,
+.places li {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px;
+}
+
+.places,
+.contact {
+    padding-left: 20px;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 14px;
+    }
+}

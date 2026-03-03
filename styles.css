@@ -1,0 +1,117 @@
+:root {
+    --primary-color: #005073;
+    --secondary-color: #107dac;
+    --text-color: #1f2933;
+    --bg-color: #f4f7f8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(1.6rem, 2.3vw, 2.2rem);
+}
+
+header p {
+    margin: 8px 0 0;
+}
+
+nav {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+    list-style: none;
+    margin: 0;
+    padding: 12px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav a.active {
+    color: var(--secondary-color);
+}
+
+.quick-info {
+    max-width: 1100px;
+    margin: 14px auto 0;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 12px;
+}
+
+.quick-info article {
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    padding: 14px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.quick-info h2 {
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+    color: var(--primary-color);
+}
+
+.quick-info p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+main {
+    padding: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: calc(100vh - 360px);
+    min-height: 380px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+
+footer {
+    text-align: center;
+    color: #475569;
+    padding: 10px 10px 16px;
+}
+
+@media (max-width: 768px) {
+    iframe {
+        height: calc(100vh - 440px);
+    }
+}
