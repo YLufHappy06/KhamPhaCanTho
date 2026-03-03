@@ -1,0 +1,198 @@
+:root {
+    --river: #0e7490;
+    --leaf: #2f855a;
+    --sun: #f59e0b;
+    --lotus: #f97393;
+    --text-color: #1f2933;
+    --bg-color: #f7f7f2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    color: var(--text-color);
+    background:
+        radial-gradient(circle at 15% 0%, rgba(245, 158, 11, 0.1), transparent 35%),
+        radial-gradient(circle at 85% 10%, rgba(249, 115, 147, 0.12), transparent 38%),
+        var(--bg-color);
+}
+
+header {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 26px 14px;
+    background:
+        linear-gradient(rgba(8, 47, 73, 0.55), rgba(15, 118, 110, 0.55)),
+        url("https://source.unsplash.com/1600x900/?can-tho,vietnam,river") center/cover no-repeat;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 14px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+header p {
+    margin: 10px auto 0;
+    max-width: 760px;
+    font-size: 1.03rem;
+}
+
+nav {
+    background-color: #fffdf6;
+    border-bottom: 2px solid #f1e3bf;
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 12px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--river);
+    padding: 8px 12px;
+    border-radius: 999px;
+    transition: all 0.25s ease;
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav a.active {
+    color: #fff;
+    background: linear-gradient(135deg, var(--river), var(--leaf));
+    box-shadow: 0 6px 16px rgba(14, 116, 144, 0.28);
+    transform: translateY(-1px);
+}
+
+.quick-info {
+    max-width: 1120px;
+    margin: 18px auto 0;
+    padding: 0 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+}
+
+.quick-info article {
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #efe6d1;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.quick-info article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.quick-info article:nth-child(1) {
+    border-top: 4px solid var(--sun);
+}
+
+.quick-info article:nth-child(2) {
+    border-top: 4px solid var(--river);
+}
+
+.quick-info article:nth-child(3) {
+    border-top: 4px solid var(--leaf);
+}
+
+.quick-info h2 {
+    margin: 0 0 8px;
+    font-size: 1.08rem;
+}
+
+.quick-info p {
+    margin: 0;
+    text-align: justify;
+}
+
+.interaction-panel {
+    max-width: 1120px;
+    margin: 14px auto 0;
+    padding: 0 12px;
+}
+
+.cta-btn {
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--sun), #ea580c);
+    color: #fff;
+    font-size: 0.98rem;
+    font-weight: 700;
+    padding: 10px 18px;
+    cursor: pointer;
+    box-shadow: 0 6px 14px rgba(245, 158, 11, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-btn:hover,
+.cta-btn:focus-visible {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(245, 158, 11, 0.45);
+}
+
+#tipText {
+    margin: 10px 0 0;
+    color: #334155;
+    font-style: italic;
+}
+
+main {
+    padding: 12px;
+}
+
+iframe {
+    width: min(1180px, 100%);
+    display: block;
+    margin: 0 auto;
+    height: calc(100vh - 450px);
+    min-height: 420px;
+    border: 2px solid #ecdcb3;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.14);
+}
+
+footer {
+    text-align: center;
+    color: #475569;
+    padding: 12px 10px 18px;
+}
+
+@media (max-width: 768px) {
+    iframe {
+        height: calc(100vh - 560px);
+    }
+
+    header p {
+        font-size: 0.95rem;
+    }
+}
