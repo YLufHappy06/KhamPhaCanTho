@@ -1,0 +1,205 @@
+:root {
+    --river: #0e7490;
+    --leaf: #2f855a;
+    --sun: #f59e0b;
+    --lotus: #f97393;
+    --text-color: #1f2933;
+    --bg-color: #f7f7f2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    color: var(--text-color);
+    font-size: 18px;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 15% 0%, rgba(245, 158, 11, 0.1), transparent 35%),
+        radial-gradient(circle at 85% 10%, rgba(249, 115, 147, 0.12), transparent 38%),
+        var(--bg-color);
+}
+
+header {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 20px 14px;
+    background:
+        linear-gradient(rgba(8, 47, 73, 0.55), rgba(15, 118, 110, 0.55)),
+        url("https://source.unsplash.com/1600x900/?can-tho,ninh-kieu,river") center/cover no-repeat;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 10px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(2rem, 3.4vw, 2.8rem);
+}
+
+header p {
+    margin: 8px auto 0;
+    max-width: 780px;
+    font-size: 1.06rem;
+}
+
+nav {
+    background-color: #fffdf6;
+    border-bottom: 2px solid #f1e3bf;
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--river);
+    padding: 8px 12px;
+    border-radius: 999px;
+    transition: all 0.25s ease;
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav a.active {
+    color: #fff;
+    background: linear-gradient(135deg, var(--river), var(--leaf));
+    box-shadow: 0 6px 16px rgba(14, 116, 144, 0.28);
+}
+
+.intro-row {
+    max-width: 1320px;
+    margin: 12px auto 0;
+    padding: 0 12px;
+    display: grid;
+    grid-template-columns: 1.6fr 0.9fr;
+    gap: 12px;
+}
+
+.quick-info {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+.quick-info article {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #efe6d1;
+    padding: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.quick-info article:nth-child(1) { border-top: 4px solid var(--sun); }
+.quick-info article:nth-child(2) { border-top: 4px solid var(--river); }
+.quick-info article:nth-child(3) { border-top: 4px solid var(--leaf); }
+
+.quick-info h2 {
+    margin: 0 0 6px;
+    font-size: 1.06rem;
+}
+
+.quick-info p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.interaction-panel {
+    background: #fff;
+    border: 1px solid #efe6d1;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    display: grid;
+    align-content: center;
+    gap: 8px;
+}
+
+.cta-btn {
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--sun), #ea580c);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+#tipText {
+    margin: 0;
+    color: #334155;
+    font-style: italic;
+    font-size: 0.96rem;
+}
+
+main {
+    padding: 10px 8px 6px;
+}
+
+iframe {
+    width: min(1320px, 99vw);
+    display: block;
+    margin: 0 auto;
+    height: calc(100vh - 300px);
+    min-height: 540px;
+    border: 2px solid #ecdcb3;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.14);
+}
+
+footer {
+    text-align: center;
+    color: #475569;
+    padding: 8px 10px 12px;
+    font-size: 0.94rem;
+}
+
+@media (max-width: 1024px) {
+    .intro-row {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-info {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    iframe {
+        height: calc(100vh - 420px);
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 17px;
+    }
+
+    iframe {
+        height: calc(100vh - 500px);
+        min-height: 440px;
+    }
+}
