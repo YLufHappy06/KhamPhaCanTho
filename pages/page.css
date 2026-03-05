@@ -23,7 +23,7 @@ h4 {
 }
 
 h2 {
-    margin-top: 0;
+    margin-top: 10px;
     color: var(--river);
     border-left: 6px solid var(--sun);
     padding-left: 10px;
@@ -100,8 +100,8 @@ input {
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 14px;
 }
 
@@ -160,6 +160,11 @@ button[type="submit"] {
 
 section {
     margin-bottom: 18px;
+}
+
+.image{
+    height: 200px; 
+    max-width: 100%;
 }
 
 @media (max-width: 640px) {
